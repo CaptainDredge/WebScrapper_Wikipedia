@@ -19,10 +19,12 @@ def getWordList(url):
             continue
         else:
             content=" ".join(text.strings)
+
             """words=content.lower().split()
 
             for word in words:
                 cleaned_word = clean_word(word)"""
+
             for line in content:
                   cleaned_line=clean_word(line)
             words=line.lower().split()
