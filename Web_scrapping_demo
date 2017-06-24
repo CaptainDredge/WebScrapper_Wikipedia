@@ -18,12 +18,16 @@ def getWordList(url):
         if(text.get_text()==None):
             continue
         else:
-            content=text.get_text()
-            words=content.lower().split()
+            content=" ".join(text.strings)
+            """words=content.lower().split()
 
             for word in words:
-                cleaned_word = clean_word(word)
+                cleaned_word = clean_word(word)"""
+            for line in content:
+                  cleaned_line=clean_word(line)
+            words=line.lower().split()
             #if there is still something there
+            for cleaned_word in words:
                 if len(cleaned_word) > 0:
                 #add it to our word list
                     word_list.append(cleaned_word)
